@@ -1,1 +1,0 @@
-No Derivatives License Files
