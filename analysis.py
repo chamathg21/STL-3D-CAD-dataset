@@ -44,7 +44,7 @@ if args.file:
 if args.info:
     report = ['file,num_shells,shell_num,shell_amt_void,enclosures,has_hidden_void,void_num,center_mass,bounds']
 elif not args.info:
-    report = ['file,has_hidden_void,void_num,center_mass,bounds'] 
+    report = ['file,has_hidden_void,void_num,center_mass,bounds,Risk Factor'] 
 failed=[]
 # d for design number
 vf=input('running on v or f data set? ')

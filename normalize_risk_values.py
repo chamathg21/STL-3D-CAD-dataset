@@ -21,6 +21,10 @@ def process_csv(input_filepath, output_filepath):
                 risk_values.append(risk_value)
             except ValueError:  # Handle non-numeric values gracefully
                 continue
+            except KeyError:
+                continue
+            except TypeError:
+                continue
 
             rows.append(row)
 
@@ -35,8 +39,6 @@ def process_csv(input_filepath, output_filepath):
 
             for row in rows:
                 try:
-                    print(row['Risk Factor'])
-                    print(mean_risk,std_dev_risk)
                     normalized_risk = sigmoid_normalize(float(row['Risk Factor']), mean_risk, std_dev_risk)
                     row['Risk Factor'] = normalized_risk  # Update the Risk Factor value
                 except ValueError:  # If the value is non-numeric, it'll leave it as it is

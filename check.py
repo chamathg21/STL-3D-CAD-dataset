@@ -17,7 +17,7 @@ def write(report,d,filename,has_hidden_void,voidnum=None,center_mass=None,bounds
         report[d] += f'"{bounds}",' # bounds
         report[d] += str(risk.calculate_void_risk(void_shell, external_shells))
     if not has_hidden_void:
-        report[d] += 'NO,,,'
+        report[d] += 'NO,,,,'
     
 
 def write_info(report,d,filename,num_shells,s,shell_amt_void,enclosures,has_hidden_void,voidnum=None,center_mass=None,bounds=None):
