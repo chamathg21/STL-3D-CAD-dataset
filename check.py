@@ -100,8 +100,9 @@ def check(args,filepath,filename,report,d,failed):
 
             s_hidden_void=[False]*len(i_dict)
             for i in range(len(i_dict)):
-                if i_dict[i]:
-                    s_hidden_void[i] = True
+                if i in i_dict.keys():
+                    if i_dict[i]:
+                        s_hidden_void[i] = True
             # logic:
             # if every ray has empty list (i.e. each ray only self-intersects): external
             # if some ray has some non-self intersection: some void 
